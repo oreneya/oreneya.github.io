@@ -10,6 +10,9 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         header {
             background: #333;
@@ -18,7 +21,9 @@
             padding: 1rem;
         }
         main {
+            flex: 1;
             padding: 2rem;
+            margin-bottom: 60px; /* Add space for footer */
         }
         section {
             margin-bottom: 2rem;
@@ -28,7 +33,6 @@
             color: #fff;
             text-align: center;
             padding: 1rem;
-            position: fixed;
             bottom: 0;
             width: 100%;
         }
@@ -38,6 +42,12 @@
         }
         a:hover {
             text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            main {
+                padding: 1rem;
+                margin-bottom: 80px; /* Increase space for footer on mobile */
+            }
         }
     </style>
 </head>
